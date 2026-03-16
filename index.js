@@ -17,11 +17,11 @@ const sketch = (p) => {
     p.createCanvas(400, 400)
     let canvas = p.createCanvas(p.windowWidth, 150)
     canvas.parent('desert-footer')
-    p.noLoop(240, 237, 230)
+    p.noLoop()
   }
 
   p.draw = () => {
-    p.background(200)
+    p.fill('#FAF8F3')
   }
 }
  
