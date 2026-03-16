@@ -1,3 +1,4 @@
+//purple bold current page
 const currentPath = window.location.pathname; 
 const pages = [
   { element: document.getElementById('home'), path: '/home.html' }, 
@@ -10,3 +11,18 @@ pages.forEach((page) => {
   if (currentPath === page.path) page.element.classList.add('current-page')
 })
 
+//p5.js stuff
+const sketch = (p) => {
+  p.setup = () => {
+    p.createCanvas(400, 400)
+    let canvas = p.createCanvas(p.windowWidth, 150)
+    canvas.parent('desert-footer')
+    p.noLoop(240, 237, 230)
+  }
+
+  p.draw = () => {
+    p.background(200)
+  }
+}
+ 
+new p5(sketch)
