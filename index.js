@@ -1,15 +1,15 @@
 //purple bold current page
-const currentPath = window.location.pathname; 
-const pages = [
-  { element: document.getElementById('home'), path: '/home.html' }, 
-  { element: document.getElementById('projects'), path: '/projects.html' }, 
-  { element: document.getElementById('art'), path: '/art.html' }, 
-  { element: document.getElementById('about'), path: '/about.html' }, 
-]
+// const currentPath = window.location.pathname; 
+// const pages = [
+//   { element: document.getElementById('home'), path: '/home.html' }, 
+//   { element: document.getElementById('projects'), path: '/projects.html' }, 
+//   { element: document.getElementById('art'), path: '/art.html' }, 
+//   { element: document.getElementById('about'), path: '/about.html' }, 
+// ]
 
-pages.forEach((page) => {
-  if (currentPath === page.path) page.element.classList.add('current-page')
-})
+// pages.forEach((page) => {
+//   if (currentPath === page.path) page.element.classList.add('current-page')
+// })
 
 //p5.js stuff
 const sketch = (p) => {
@@ -29,7 +29,9 @@ const sketch = (p) => {
       keyPoints.push({ x, y })
     }
 
-    keyPoints({ x: p.width + 10, y: baseY }) //rightest most key point 
+    keyPoints.push({ x: p.width + 10, y: baseY }) //rightest most key point 
+
+
 
     let points = [] //stores points in between key points 
     for (let i = 0; i < keyPoints.length - 1; i++) {
@@ -37,21 +39,19 @@ const sketch = (p) => {
       let intermediatePoints = Math.max(3, Math.floor(Math.abs(b.x - a.x) / 2))
 
       for (let s = 0; s < intermediatePoints; s++) { 
-        t = s / intermediatePoints //represents percentage distance (decimal) between a and b 
+        let t = s / intermediatePoints //represents percentage distance (decimal) between a and b 
         points.push({ x: p.lerp(a.x, b.x, t), y: p.lerp(a.y, b.y, t) })
       }
-
-      points.push(keyPoints[keyPoints.length - 1]) //manually adds last point 
-
-      return points 
     }
+
+    points.push(keyPoints[keyPoints.length - 1]) //manually adds last point 
+    return points 
 
   }
 
 
   p.setup = () => {
-    p.createCanvas(400, 400)
-    let canvas = p.createCanvas(p.windowWidth, 150)
+    let canvas = p.createCanvas(p.windowWidth, 300)
     canvas.parent('desert-footer')
     p.noLoop()
   }
@@ -60,12 +60,15 @@ const sketch = (p) => {
     p.background('#FAF8F3')
 
     const mountainPoints = makeMountain(10, p.height * 0.6, p.height * 0.4, 11)
-    p.fill(225, 221, 235)
+    console.log(mountainPoints)
+    console.log('canvas height', p.height)
+    p.fill('#E1DDE8')
     p.noStroke()
     p.beginShape()
-    for (let point of points ) p.vertex(pt.x, pt.y)
-
-
+    for (let point of mountainPoints ) p.vertex(point.x, point.y)
+    p.vertex(p.width, p.height + 5)
+    p.vertex(0, p.height + 5)
+    p.endShape(p.CLOSE);
   }
 }
  
