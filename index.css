@@ -7,7 +7,7 @@
 
 body {
   background-color: #FAF8F3;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Linux Libertine'; 
   margin: 0; 
   padding: 0; 
 }
@@ -187,9 +187,23 @@ a:hover {
   opacity: 0.38;
 }
 
+/* p5.js footer */
+
+#desert-footer {
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%;  
+}
+
+#desert-footer canvas {
+  display: block;  
+}
+
+
 /* cactii */
 
-.cactus-left-1 {
+/* .cactus-left-1 {
   position: fixed;
   bottom: 0;
   left: 50px;
@@ -240,7 +254,7 @@ a:hover {
   height: 14px;
   background: #9abb9a;
 } */
-
+/* 
 .cactus-left-1::before {
   content: '';
   position: absolute;
@@ -322,7 +336,7 @@ a:hover {
   width: 14px;
   height: 24px;
   background: #C8D4C0;
-}
+}  */
 
 /* p5.js footer */
 
