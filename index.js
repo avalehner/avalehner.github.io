@@ -72,8 +72,8 @@ const sketch = (p) => {
     for (let i = 0; i < numLeaves; i++ ) {
       const t = i / (numLeaves - 1)
       const angle = p.lerp(p.PI * 1.1, p.PI * 1.9, t)
-      const length = size * p.lerp(0.6, 1.0, Math.sin(t * p.PI)) //how does it know to stop at 180 degrees? 
-      const leafWidth = size * 0.11 //ask for trigonometry/calculus (derivative) refresher here
+      const length = size * p.lerp(0.6, 1.0, Math.sin(t * p.PI))
+      const leafWidth = size * 0.11 
       const tipX = x + p.cos(angle) * length 
       const tipY = y + p.sin(angle) * length
       const midX = x + p.cos(angle) * (length/2)
@@ -136,13 +136,13 @@ const sketch = (p) => {
   }
 
   p.setup = () => {
-    let canvas = p.createCanvas(p.windowWidth, 175)
+    let canvas = p.createCanvas(p.windowWidth, 150)
     canvas.parent('desert-footer')
     p.noLoop()
   }
 
   p.draw = () => {
-    // p.background('#FAF8F3')
+    p.background('#FAF8F3')
     
     //draw mountains 
     const mountainPointsArr = [
@@ -176,7 +176,7 @@ const sketch = (p) => {
   }
 
   p.windowResized = () => {
-    p.resizeCanvas(p.windowWidth, 175)
+    p.resizeCanvas(p.windowWidth, 150)
     p.redraw()
   }
 }

@@ -56,6 +56,7 @@ a {
   padding: 0;
   overflow: hidden;
   color: #2D4A2D; 
+  font-size: 1.1rem; 
 }
 
 a:hover {
@@ -70,6 +71,10 @@ a:hover {
   margin-top: 60px; 
 }
 
+.welcome-text p { 
+  font-size: 1.1rem; 
+}
+
 /* projects */
 
 .featured-projects {
@@ -79,6 +84,7 @@ a:hover {
 .project-card {
   flex-direction: column;
   margin-top: 20px; 
+  font-size: 1.1rem; 
 }
 
 .project-title, .project-skills, .project-card {
@@ -198,6 +204,17 @@ a:hover {
 
 #desert-footer canvas {
   display: block;  
+}
+
+.footer-fade { 
+  position: fixed; 
+  bottom: 150px; 
+  left: 0; 
+  right: 0; 
+  height: 80px; 
+  background: linear-gradient(to bottom, transparent, #FAF8F3); 
+  z-index: 1; 
+  pointer-events: none; 
 }
 
 
