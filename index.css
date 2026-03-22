@@ -1,13 +1,11 @@
 /* todo:
--Make it so that the page you are on is bolded purple
--smooth a:hover
 -better font
 -link projects to pages
 */
 
 body {
-  background-color: #FAF8F3;
-  font-family: 'Linux Libertine'; 
+  background: #FAF8F3;   /*linear-gradient(rgb(255, 137, 64) 0px, #FAF8F3 100px);*/
+    font-family: "Space Mono", monospace;
   margin: 0; 
   padding: 0; 
 }
@@ -18,10 +16,9 @@ main {
   margin: auto;
   padding: 3em 1em;
 }
-
 /* font color */
 
-.current-page {
+.current-page, .inline-link  {
   color: #9073bb; 
   font-weight: 600; 
 }
@@ -56,7 +53,8 @@ a {
   padding: 0;
   overflow: hidden;
   color: #2D4A2D; 
-  font-size: 1.1rem; 
+  /* background-color: #f2e0ce;  */
+  font-size: 1rem; 
 }
 
 a:hover {
@@ -72,19 +70,23 @@ a:hover {
 }
 
 .welcome-text p { 
-  font-size: 1.1rem; 
+  font-size: 1rem; 
 }
 
 /* projects */
 
-.featured-projects {
+.projects-header {
   margin-top: 60px; 
+}
+
+.featured-projects {
+  margin-top: 0px; 
 }
 
 .project-card {
   flex-direction: column;
   margin-top: 20px; 
-  font-size: 1.1rem; 
+  font-size: 1rem; 
 }
 
 .project-title, .project-skills, .project-card {
@@ -95,102 +97,6 @@ a:hover {
 .project-name {
   color: #9073bb; 
   font-weight: 600; 
-}
-
-/* mountains */
-
-.mountains {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  z-index: -1;
-}
-
-.mountain {
-  position: absolute;
-  bottom: 0;
-}
-
-.mountain-back-left {
-  left: 5%;
-  width: 0;
-  height: 0;
-  border-left: 80px solid transparent;
-  border-right: 120px solid transparent;
-  border-bottom: 90px solid #B8B4D8;
-  opacity: 0.4;
-}
-
-.mountain-mid-left {
-  left: 8%;
-  width: 0;
-  height: 0;
-  border-left: 65px solid transparent;
-  border-right: 95px solid transparent;
-  border-bottom: 75px solid #A8A4C8;
-  opacity: 0.5;
-}
-
-.mountain-back-right {
-  right: 5%;
-  width: 0;
-  height: 0;
-  border-left: 130px solid transparent;
-  border-right: 80px solid transparent;
-  border-bottom: 95px solid #C8C4E0;
-  opacity: 0.35;
-}
-
-.mountain-mid-right {
-  right: 10%;
-  width: 0;
-  height: 0;
-  border-left: 95px solid transparent;
-  border-right: 55px solid transparent;
-  border-bottom: 70px solid #B0A8D0;
-  opacity: 0.45;
-}
-
-.mountain-center-1 {
-  left: 40%;
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 55px solid #C0B8D8;
-  opacity: 0.4;
-}
-
-.mountain-center-2 {
-  left: 45%;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 45px solid #A898C0;
-  opacity: 0.5;
-}
-
-.mountain-left-small {
-  left: 20%;
-  width: 0;
-  height: 0;
-  border-left: 55px solid transparent;
-  border-right: 55px solid transparent;
-  border-bottom: 50px solid #B8B0D0;
-  opacity: 0.35;
-}
-
-.mountain-right-small {
-  right: 25%;
-  width: 0;
-  height: 0;
-  border-left: 58px solid transparent;
-  border-right: 58px solid transparent;
-  border-bottom: 52px solid #C8C0E8;
-  opacity: 0.38;
 }
 
 /* p5.js footer */
@@ -208,7 +114,7 @@ a:hover {
 
 .footer-fade { 
   position: fixed; 
-  bottom: 150px; 
+  bottom: 115px; 
   left: 0; 
   right: 0; 
   height: 80px; 
@@ -216,157 +122,3 @@ a:hover {
   z-index: 1; 
   pointer-events: none; 
 }
-
-
-/* cactii */
-
-/* .cactus-left-1 {
-  position: fixed;
-  bottom: 0;
-  left: 50px;
-  width: 20px;
-  height: 70px;
-  background: #B8D4B8;
-  z-index: 1;
-  opacity: 0.9;
-}
-.cactus-left-2 {
-  position: fixed;
-  bottom: 0;
-  left: 47px;
-  width: 20px;
-  height: 70px;
-  background: #9abb9a;
-  z-index: 0;
-  opacity: 0.9;
-}
-
-/* .cactus-left-3 {
-  position: fixed;
-  bottom: 0;
-  left: 90px;
-  width: 20px;
-  height: 100px;
-  background: #9abb9a;
-  z-index: 0;
-  opacity: 0.9;
-}
-
-.cactus-left-3::before {
-  content: '';
-  position: absolute;
-  left: -16px;
-  top: 24px;
-  width: 16px;
-  height: 12px;
-  background: #9abb9a;
-}
-
-.cactus-left-3::after {
-  content: '';
-  position: absolute;
-  right: -16px;
-  top: 32px;
-  width: 16px;
-  height: 14px;
-  background: #9abb9a;
-} */
-/* 
-.cactus-left-1::before {
-  content: '';
-  position: absolute;
-  left: -16px;
-  top: 24px;
-  width: 16px;
-  height: 12px;
-  background: #B8D4B8;
-}
-
-.cactus-left-1::after {
-  content: '';
-  position: absolute;
-  right: -16px;
-  top: 32px;
-  width: 16px;
-  height: 14px;
-  background: #B8D4B8;
-}
-
-.cactus-center {
-  position: fixed;
-  bottom: 0;
-  left: 30%;
-  width: 10px;
-  height: 40px;
-  background: #B0D0B0;
-  z-index: 1;
-  opacity: 0.8;
-}
-
-.cactus-center::before {
-  content: '';
-  position: absolute;
-  left: -12px;
-  top: 12px;
-  width: 12px;
-  height: 7px;
-  background: #B0D0B0;
-}
-
-.cactus-center::after {
-  content: '';
-  position: absolute;
-  right: -12px;
-  top: 7px;
-  width: 12px;
-  height: 9px;
-  background: #B0D0B0;
-}
-
-.cactus-right-1 {
-  position: fixed;
-  bottom: 0;
-  right: 50px;
-  width: 20px;
-  height: 68px;
-  background: #C8D4C0;
-  z-index: 1;
-  opacity: 0.85;
-}
-
-.cactus-right-2 {
-  position: fixed;
-  bottom: 0;
-  right: 48px;
-  width: 20px;
-  height: 68px;
-  background: #8da878;
-  z-index: 0;
-  opacity: 0.85;
-}
-
-.cactus-right-1::before {
-  content: '';
-  position: absolute;
-  left: -14px;
-  top: 20px;
-  width: 14px;
-  height: 24px;
-  background: #C8D4C0;
-}  */
-
-/* p5.js footer */
-
-#desert-footer {
-  position: fixed; 
-  bottom: 0; 
-  left: 0; 
-  width: 100%; 
-}
-
-
-
-
-
-
-
