@@ -3,18 +3,53 @@
 -link projects to pages
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+
 body {
-  background: #FAF8F3;   /*linear-gradient(rgb(255, 137, 64) 0px, #FAF8F3 100px);*/
-    font-family: "Space Mono", monospace;
+  background: #fcfbf5;   /*linear-gradient(rgb(255, 137, 64) 0px, #FAF8F3 100px);*/
+  font-family: "Libertinus Serif", serif;
   margin: 0; 
-  padding: 0; 
+  padding: 2rem; 
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  /* warm gradients */
+  background:
+    radial-gradient(ellipse at top left, rgba(120, 80, 40, 0.15), transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(120, 80, 40, 0.18), transparent 50%);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.4  0 0 0 0 0.25  0 0 0 0 0.1  0 0 0 0.3 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mix-blend-mode: multiply;
 }
 
 main {
-  width: 700px;
+  width: 100%;
   max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
+  margin: 0 auto;
+  padding: 1rem; 
+  /* border: #2D4A2D 1px solid;  */
+}
+
+.main-container {
+  border: #2D4A2D 1px solid; 
+  margin: 1rem 0;  
+  padding: 1rem 1rem 2%; 
 }
 /* font color */
 
@@ -58,16 +93,12 @@ a {
 }
 
 a:hover {
-  color: black; 
+  color: #4c1c6b; 
   transition: color 0.3s ease-in-out; 
 }
 
 
 /* welcome section */
-
-.welcome-text {
-  margin-top: 60px; 
-}
 
 .welcome-text p { 
   font-size: 1rem; 
@@ -108,11 +139,11 @@ a:hover {
   width: 100%;  
 }
 
-#desert-footer canvas {
+/* #desert-footer canvas {
   display: block;  
-}
+} */
 
-.footer-fade { 
+/* .footer-fade { 
   position: fixed; 
   bottom: 115px; 
   left: 0; 
@@ -121,4 +152,4 @@ a:hover {
   background: linear-gradient(to bottom, transparent, #FAF8F3); 
   z-index: 1; 
   pointer-events: none; 
-}
+} */
