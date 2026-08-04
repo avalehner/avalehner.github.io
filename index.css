@@ -24,13 +24,13 @@ body {
   /* background-image: radial-gradient(#5c2962 0%, #2b1630 95%, #19121f 100%); */
   /* background: #381b46;  */
   background:
-    radial-gradient(ellipse 1200px 800px at 0% 110%, rgba(194, 102, 93, 0.35), transparent 60%),
+    radial-gradient(ellipse 1200px 1200px at 9% 140%, rgba(194, 102, 93, 0.20), transparent 60%),
     radial-gradient(ellipse 700px 700px at 95% 4%, rgba(132, 100, 160, 0.4), transparent 60%),
     radial-gradient(ellipse 1200px 1200px at 91% 100%, rgb(116, 51, 100, 0.4), transparent 60%),
-    linear-gradient(160deg, #241826 0%, #3E2245 45%, #2A1B2E 100%);
+    linear-gradient(160deg, #241826 0%, #3E2245 65%, #2A1B2E 100%); 
   background-attachment: fixed;
   min-height: 100vh;
-  font-family: "Space Mono";
+  font-family: "SF Mono";
   margin: 0; 
   padding: 2rem; 
   position: relative;
@@ -85,7 +85,7 @@ main {
 /* welcome section */
 
 .welcome-text h1 {
-  font-size: 1.5rem; 
+  font-size: 1.8rem; 
   color: #FFFFFF; 
   font-weight: 100; 
 }
