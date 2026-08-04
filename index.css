@@ -104,32 +104,62 @@ main {
   background: #664169; 
 }
 
+.project-name,
+.project-year,
+.project-description,
+.tag {
+  margin: 0;
+}
+
 .project-card {
-  /* flex-direction: column; */
-  margin-top: 20px; 
-  font-size: 0.7rem; 
+  margin-top: 20px;
+  font-size: 0.7rem;
   display: flex;
+  align-items: flex-start;   
   gap: 1rem;
-  padding: 1.6rem 0;
+  padding: 0.7rem 0 1.6rem;
   border-bottom: 1px solid rgba(246,242,236,0.12);
 }
 
+.caret {
+  font-size: 0.8rem;           
+  /* line-height: 1.2;   */
+  margin: 0;    
+  padding-right: 0.5rem;  
+  display: inline-block;
+  transform: translateY(-1px);    
+  font-weight: 100; 
+  color: #7E8BB8; 
+}
+
 .project-title {
-  display: flex; 
-  align-items: flex-start; 
-  gap: 0.7rem; 
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.project-name {
+  padding-right: 0.25rem; 
+}
+
+.project-description {
+  margin-top: 0.8rem;
 }
 
 .project-tags {
-  display: flex; gap: 0.6rem; margin-top: 0.9rem; 
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
 }
 
 .tag {
-    border: 1px solid var(--accent, var(--ash));
-  color: var(--accent, var(--ash));
+  /* border: 1px solid var(--accent, var(--ash)); */
+  border: 1px solid #7E8BB8; 
+  /* color: var(--accent, var(--ash)); */
+  color: #7E8BB8; 
   border-radius: 100px;
-  padding: 0.3rem 0.9rem;
-  font-size: 0.8rem;
+  padding: 0.05rem 0.8rem 0.1rem;
+  font-size: 0.7rem;
 }
 
 .project-title, .project-skills, .project-card {
@@ -146,14 +176,19 @@ main {
   color: #B3A3B9; 
 }
 
-/* p5.js footer */
+.project-year {
+  color: #7E8BB8; 
+}
+
+
+/* p5.js footer
 
 #desert-footer {
   position: fixed; 
   bottom: 0; 
   left: 0; 
   width: 100%;  
-}
+} */
 
 /* #desert-footer canvas {
   display: block;  
