@@ -5,8 +5,31 @@
 
 /* @import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"); */
 
+:root {
+  --void: #0C070B;
+  --plum-one: #28152B;
+  --plum-two: #28152B;
+  --violet: #8464A0;
+  --purple-line-color: #664169; 
+  --magenta: #5F275E; 
+  --ember: #9C464A; 
+  --sage: #93AE7D; 
+  --mist: #C4E3AC; 
+  --ash: #CABBD0; 
+  --sun: #E8C88A; 
+  --periwinkle: #7E8BB8; 
+}
+
 body {
-  background-image: radial-gradient(#5F2962 0%, #2F1630 95%, #1F121C 100%);
+  /* background-image: radial-gradient(#5c2962 0%, #2b1630 95%, #19121f 100%); */
+  /* background: #381b46;  */
+  background:
+    radial-gradient(ellipse 1200px 800px at 0% 110%, rgba(194, 102, 93, 0.35), transparent 60%),
+    radial-gradient(ellipse 700px 700px at 95% 4%, rgba(132, 100, 160, 0.4), transparent 60%),
+    radial-gradient(ellipse 1200px 1200px at 91% 100%, rgb(116, 51, 100, 0.4), transparent 60%),
+    linear-gradient(160deg, #241826 0%, #3E2245 45%, #2A1B2E 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
   font-family: "Space Mono";
   margin: 0; 
   padding: 2rem; 
@@ -16,7 +39,7 @@ body {
 
 main {
   width: 100%;
-  max-width: calc(100% - 25rem);
+  max-width: calc(100% - 30rem);
   margin: 0 auto;
   padding: 1rem; 
 }
@@ -29,16 +52,10 @@ main {
 /* font color */
 
 .current-page, .inline-link  {
-  color: #E8C88A; 
+  color: var(--sun); 
   font-weight: 100; 
   text-decoration: underline dotted; 
 }
-
-/* .current-page:hover {
-  color: #4f3f68; 
-  transition: color 0.3s ease-in-out; 
-} */
-
 
 .nav-bar {
   display: flex; 
@@ -47,7 +64,7 @@ main {
   margin: 0; 
   padding: 0;
   overflow: hidden;
-  font-size: 0.8rem; 
+  font-size: 1.1rem; 
 }
 
 .nav-bar a {
@@ -68,14 +85,14 @@ main {
 /* welcome section */
 
 .welcome-text h1 {
-  font-size: 1rem; 
+  font-size: 1.5rem; 
   color: #FFFFFF; 
   font-weight: 100; 
 }
 
 .welcome-text p { 
-  font-size: 0.7rem; 
-  color: #CABBD0; 
+  font-size: 1.1rem; 
+  color: var(--ash); 
   font-weight: 100; 
   border-left: 0.1px solid rgb(232, 200, 138, 0.7); 
   padding-left: 1.6rem;
@@ -90,7 +107,7 @@ main {
 
 .featured-projects-label {
   color: #C4E3AC; 
-  font-size: 0.8rem; 
+  font-size: 1.1rem; 
   font-weight: 100; 
   display: flex; 
   align-items: center; 
@@ -100,8 +117,8 @@ main {
 .featured-projects-label::after {
   content: ''; 
   flex: 1; 
-  height: 1px; 
-  background: #664169; 
+  height: 0.5px; 
+  background: var(--purple-line-color); 
 }
 
 .project-name,
@@ -113,7 +130,7 @@ main {
 
 .project-card {
   margin-top: 20px;
-  font-size: 0.7rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: flex-start;   
   gap: 1rem;
@@ -122,7 +139,7 @@ main {
 }
 
 .caret {
-  font-size: 0.8rem;           
+  font-size: 1.1rem;           
   /* line-height: 1.2;   */
   margin: 0;    
   padding-right: 0.5rem;  
@@ -149,7 +166,7 @@ main {
 .project-tags {
   display: flex;
   gap: 0.6rem;
-  margin-top: 0.9rem;
+  margin-top: 1.2rem;
 }
 
 .tag {
@@ -159,7 +176,7 @@ main {
   color: #7E8BB8; 
   border-radius: 100px;
   padding: 0.05rem 0.8rem 0.1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .project-title, .project-skills, .project-card {
