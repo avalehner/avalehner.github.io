@@ -3,121 +3,133 @@
 -link projects to pages
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"); */
 
 body {
-  background: #fcfbf5;   /*linear-gradient(rgb(255, 137, 64) 0px, #FAF8F3 100px);*/
-  font-family: "Libertinus Serif", serif;
+  background-image: radial-gradient(#5F2962 0%, #2F1630 95%, #1F121C 100%);
+  font-family: "Space Mono";
   margin: 0; 
   padding: 2rem; 
   position: relative;
   overflow-x: hidden;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  /* warm gradients */
-  background:
-    radial-gradient(ellipse at top left, rgba(120, 80, 40, 0.15), transparent 50%),
-    radial-gradient(ellipse at bottom right, rgba(120, 80, 40, 0.18), transparent 50%);
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.4;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.4  0 0 0 0 0.25  0 0 0 0 0.1  0 0 0 0.3 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  mix-blend-mode: multiply;
-}
-
 main {
   width: 100%;
-  max-width: calc(100% - 2em);
+  max-width: calc(100% - 25rem);
   margin: 0 auto;
   padding: 1rem; 
-  /* border: #2D4A2D 1px solid;  */
 }
 
 .main-container {
-  border: #2D4A2D 1px solid; 
   margin: 1rem 0;  
-  padding: 1rem 1rem 2%; 
+  padding: 1rem 0 2%; 
 }
+
 /* font color */
 
 .current-page, .inline-link  {
-  color: #9073bb; 
-  font-weight: 600; 
+  color: #E8C88A; 
+  font-weight: 100; 
+  text-decoration: underline dotted; 
 }
 
-.current-page:hover {
+/* .current-page:hover {
   color: #4f3f68; 
   transition: color 0.3s ease-in-out; 
-}
+} */
 
-h1, h2, h3 {
-  color: #2D4A2D; 
-} 
-
-p {
-  color: #3A5A3A; 
-  margin: 0; 
-}
-
-a {
-  color: #3A5A3A; 
-  text-decoration: none;
-  cursor: pointer; 
-}
-
-/* nav bar */
 
 .nav-bar {
   display: flex; 
-  gap: 10px; 
+  gap: 20px; 
   list-style-type: none; 
   margin: 0; 
   padding: 0;
   overflow: hidden;
-  color: #2D4A2D; 
-  /* background-color: #f2e0ce;  */
-  font-size: 1rem; 
+  font-size: 0.8rem; 
 }
 
-a:hover {
-  color: #4c1c6b; 
+.nav-bar a {
+  color: #C4E3AC; 
+  text-decoration: none; 
+}
+
+.nav-bar a:hover {
+  color: #58674d; 
   transition: color 0.3s ease-in-out; 
 }
 
+.inline-link:hover {
+  color: #8e6d2c; 
+  transition: color 0.3s ease-in-out; 
+}
 
 /* welcome section */
 
-.welcome-text p { 
+.welcome-text h1 {
   font-size: 1rem; 
+  color: #FFFFFF; 
+  font-weight: 100; 
+}
+
+.welcome-text p { 
+  font-size: 0.7rem; 
+  color: #CABBD0; 
+  font-weight: 100; 
+  border-left: 0.1px solid rgb(232, 200, 138, 0.7); 
+  padding-left: 1.6rem;
+  margin-top: 1.5rem; 
 }
 
 /* projects */
 
-.projects-header {
-  margin-top: 60px; 
+.featured-projects-container {
+  margin-top: 2.5rem; 
 }
 
-.featured-projects {
-  margin-top: 0px; 
+.featured-projects-label {
+  color: #C4E3AC; 
+  font-size: 0.8rem; 
+  font-weight: 100; 
+  display: flex; 
+  align-items: center; 
+  gap: 1.2rem; 
+}
+
+.featured-projects-label::after {
+  content: ''; 
+  flex: 1; 
+  height: 1px; 
+  background: #664169; 
 }
 
 .project-card {
-  flex-direction: column;
+  /* flex-direction: column; */
   margin-top: 20px; 
-  font-size: 1rem; 
+  font-size: 0.7rem; 
+  display: flex;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(246,242,236,0.12);
+}
+
+.project-title {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 0.7rem; 
+}
+
+.project-tags {
+  display: flex; gap: 0.6rem; margin-top: 0.9rem; 
+}
+
+.tag {
+    border: 1px solid var(--accent, var(--ash));
+  color: var(--accent, var(--ash));
+  border-radius: 100px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.8rem;
 }
 
 .project-title, .project-skills, .project-card {
@@ -126,8 +138,12 @@ a:hover {
 }
 
 .project-name {
-  color: #9073bb; 
-  font-weight: 600; 
+  color: #FFFFFF; 
+  font-weight: 300; 
+}
+
+.project-description {
+  color: #B3A3B9; 
 }
 
 /* p5.js footer */
