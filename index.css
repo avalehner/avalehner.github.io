@@ -30,7 +30,7 @@ body {
   /* linear-gradient(180deg, #3e2c41 0%, #4c2d54 65%, #2A1B2E 100%);  */
   /* background-attachment: fixed; */
   min-height: 100vh;
-  font-family: "SF Mono";
+  font-family: "SF Mono", "Space Mono";
   margin: 0;
   padding: 0 2rem;
   position: relative;
