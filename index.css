@@ -37,10 +37,16 @@ body {
   overflow-x: hidden;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 main {
   width: 100%;
-  max-width: calc(100% - 500rem);
-  min-width: 800px;
+  max-width: 56rem;
+  min-width: 0;
   margin: 0 auto;
   padding: 3rem 4rem;
   /* background: #ffefdf; */
@@ -199,6 +205,10 @@ main {
   gap: 5px;
 }
 
+.project-body {
+  min-width: 0;
+}
+
 .project-name a {
   /* color: #ffffff; */
   color: #93ae7d;
@@ -222,6 +232,89 @@ main {
 .project-year {
   /* color: #7e8bb8; */
   color: #93ae7d;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0 1.25rem;
+  }
+
+  main {
+    width: 100%;
+    min-width: 0;
+    padding: 1.5rem 0 2.5rem;
+  }
+
+  .main-container {
+    margin-top: 1.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-bar {
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  .welcome-text h1 {
+    margin: 0;
+    font-size: clamp(1.4rem, 7vw, 1.7rem);
+    line-height: 1.25;
+  }
+
+  .welcome-text p {
+    padding-left: 1rem;
+    line-height: 1.65;
+  }
+
+  .featured-projects-container {
+    margin-top: 2rem;
+  }
+
+  .featured-projects-label {
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .project-card {
+    gap: 0.35rem;
+    padding: 0.75rem 0 1.25rem;
+  }
+
+  .caret {
+    padding-right: 0.25rem;
+  }
+
+  .project-name a,
+  .project-description,
+  .inline-link {
+    overflow-wrap: anywhere;
+  }
+
+  .project-description {
+    line-height: 1.55;
+  }
+
+  .project-tags {
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1rem;
+  }
+
+  .tag {
+    padding-inline: 0.65rem;
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    padding-inline: 1rem;
+  }
+
+  .nav-bar {
+    font-size: 0.8rem;
+  }
 }
 
 /* p5.js footer
