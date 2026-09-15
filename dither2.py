@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 from PIL import Image
 import dithering
 
@@ -11,37 +12,32 @@ def luminance(rgb):
     return 0.299 * r + 0.587 * g + 0.114 * b
 
 # Load and grayscale
-# img = Image.open("images/IMG_4224.png").convert("L")
-
-# Replace the standard .convert("L") step with this custom weighting
-img_rgba = Image.open("images/IMG_4224.png").convert("RGBA")
-background = Image.new("RGBA", img_rgba.size, (0, 0, 0, 255))
-composited = Image.alpha_composite(background, img_rgba).convert("RGB")
-
-rgb_arr = np.array(composited, dtype=np.float32)
-
-# custom weights: more red, less green, than standard luminance
-# standard is 0.299R + 0.587G + 0.114B -- this pulls weight toward red
-gray_arr = 0.5 * rgb_arr[..., 0] + 0.4 * rgb_arr[..., 1] + 0.1 * rgb_arr[..., 2]
-gray_arr = np.clip(gray_arr, 0, 255).astype(np.uint8)
-
-img = Image.fromarray(gray_arr)
+img = Image.open("images/IMG_4224.png").convert("L")
 
 # downscale before dithering
 scale_factor = 4
 small_size = (img.width // scale_factor, img.height // scale_factor)
 img = img.resize(small_size, Image.LANCZOS)
 
-arr = np.array(img, dtype=np.float32)
+arr = np.array(img, dtype=np.uint8)
 
-# --- NEW: percentile-based levels stretch instead of fixed-midpoint contrast ---
+# --- CLAHE (local contrast) to pull out highlight detail in shadowed areas
+# like the face, without blowing out already-bright areas like the sky ---
+clip_limit = 2.5      # higher = stronger local contrast boost. try 2.0-4.0
+tile_grid_size = 8    # smaller tiles = more localized boosting. try 4-16
+clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=(tile_grid_size, tile_grid_size))
+arr = clahe.apply(arr)
+arr = arr.astype(np.float32)
+
+# levels stretch (global) -- lighter touch now since CLAHE did local work already
 black_point = np.percentile(arr, 2)
-white_point = np.percentile(arr, 30)  
+white_point = np.percentile(arr, 98)
+arr = (arr - black_point) / (white_point - black_point) * 255
 arr = np.clip(arr, 0, 255)
 
 # gamma adjustment
 arr = arr / 255.0
-gamma = 1.0
+gamma = 0.95
 arr = np.power(arr, gamma)
 arr = arr * 255
 
@@ -63,4 +59,4 @@ dithered_image = dithering.dither(img_processed, method="floyd-steinberg", palet
 final_size = (dithered_image.width * scale_factor, dithered_image.height * scale_factor)
 dithered_image = dithered_image.resize(final_size, Image.NEAREST)
 
-dithered_image.save("images/dithered_IMG_4224_floyd_steinberg.jpg")
+dithered_image.save("images/dithered_IMG_4224_floyd_steinberg_dither2.jpg")
