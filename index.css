@@ -23,7 +23,7 @@
 body {
   /* background-image: radial-gradient(#5c2962 0%, #2b1630 95%, #19121f 100%); */
   /* background: #381b46;  */
-  background: #ffffff;
+  background: #fff6ee;
   /* radial-gradient(ellipse 1200px 1200px at 9% 140%, rgba(194, 102, 93, 0.20), transparent 60%),
     radial-gradient(ellipse 700px 700px at 95% 4%, rgba(132, 100, 160, 0.4), transparent 60%),
     radial-gradient(ellipse 1200px 1200px at 91% 100%, rgb(116, 51, 100, 0.4), transparent 60%), */
@@ -105,7 +105,7 @@ main {
 .welcome-text h1 {
   font-size: 1.7rem;
   /* color: #ffffff; */
-  color: #806988;
+  color: #6e5875;
   font-weight: 400;
 }
 
@@ -127,7 +127,7 @@ main {
 
 .featured-projects-label {
   /* color: #c4e3ac; */
-  color: #806988;
+  color: #6e5875;
   font-size: 1.1rem;
   /* font-weight: 300; */
   display: flex;
@@ -160,6 +160,10 @@ main {
   border-bottom: 0.5px solid #cabbd0;
 }
 
+.project-card:last-child {
+  border-bottom: none;
+}
+
 .caret {
   font-size: 1rem;
   /* line-height: 1.2;   */
@@ -186,8 +190,8 @@ main {
 
 .tag {
   /* border: 1px solid var(--accent, var(--ash)); */
-  border: 0.75px solid #7e8bb8;
-  background-color: #fefeff;
+  border: 0.75px solid hsl(227, 29%, 61%);
+  background-color: none;
   /* border: 0.5px solid #edb03f; */
   /* color: var(--accent, var(--ash)); */
   color: #7e8bb8;
