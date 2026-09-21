@@ -11,6 +11,9 @@ pages.forEach((page) => {
 
 const sketch = (p) => {
 
+  const getFooterWidth = () =>
+    document.getElementById('desert-footer')?.clientWidth || p.windowWidth
+
   const makeMountain = (seed, baseY, peakAmp, numPeaks) => {
     p.randomSeed(seed)
     p.noiseSeed(seed + 100)
@@ -243,8 +246,7 @@ const sketch = (p) => {
   }
 
   p.setup = () => {
-    const canvas = p.createCanvas(p.windowWidth, 115)
-    canvas.parent('desert-footer')
+    p.createCanvas(getFooterWidth(), 115)
     generate()
     p.noLoop()
   }
@@ -286,7 +288,7 @@ const sketch = (p) => {
   p.windowResized = () => {
     clearTimeout(resizeTimer)
     resizeTimer = setTimeout(() => {
-      p.resizeCanvas(p.windowWidth, 115)
+      p.resizeCanvas(getFooterWidth(), 115)
       generate()
       p.redraw()
     }, 200)
@@ -294,4 +296,8 @@ const sketch = (p) => {
 
 }
 
-new p5(sketch)
+const desertFooter = document.getElementById('desert-footer')
+
+if (desertFooter && typeof p5 !== 'undefined') {
+  new p5(sketch, desertFooter)
+}

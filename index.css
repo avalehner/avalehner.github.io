@@ -321,6 +321,16 @@ main {
   }
 }
 
+#desert-footer {
+  width: 100%;
+  line-height: 0;
+}
+
+#desert-footer canvas {
+  display: block;
+  max-width: 100%;
+}
+
 /* p5.js footer
 
 #desert-footer {
