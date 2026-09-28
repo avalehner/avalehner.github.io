@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("fonts/linux-libertine/LinLibertine_R.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("fonts/linux-libertine/LinLibertine_RB.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("fonts/linux-libertine/LinLibertine_RI.woff") format("woff");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("fonts/linux-libertine/LinLibertine_RBI.woff") format("woff");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   /* palette */
   --paper: #f1eee3;
@@ -12,7 +44,7 @@
   --accent2-tint: color-mix(in srgb, var(--accent2) 28%, var(--paper));
 
   /* type */
-  --serif: "Libertinus Serif", "Linux Libertine", Georgia, serif;
+  --serif: "Linux Libertine", Georgia, serif;
   --mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* shape */
@@ -622,7 +654,7 @@ a.card--terminal:hover {
   margin-top: auto;
   max-width: 400px;
   padding-top: 16px;
-  border-top: var(--line);
+  /* border-top: var(--line); */
   font-family: var(--mono);
   font-size: 12px;
   color: var(--muted);
