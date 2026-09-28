@@ -1,0 +1,5 @@
+numpy
+opencv-python
+Pillow
+dithering
+rembg[cpu]
