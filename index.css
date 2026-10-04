@@ -64,7 +64,7 @@ main {
 .inline-link {
   /* color: var(--sun); */
   /* color: #edb03f; */
-  color: #7e8bb8;
+  color: #4f608b;
 
   /* font-weight: 300; */
   text-decoration: underline dotted;
@@ -82,7 +82,7 @@ main {
 
 .nav-bar a {
   /* color: #c4e3ac; */
-  color: #93ae7d;
+  color: #526b48;
   text-decoration: none;
 }
 
@@ -173,7 +173,7 @@ main {
   transform: translateY(-1px);
   /* font-weight: 300; */
   /* color: #7e8bb8; */
-  color: #93ae7d;
+  color: #526b48;
 }
 
 .project-title {
@@ -190,16 +190,16 @@ main {
 
 .tag {
   /* border: 1px solid var(--accent, var(--ash)); */
-  border: 0.75px solid hsl(227, 29%, 61%);
+  border: 0.75px solid #4f608b;
   background-color: none;
   /* border: 0.5px solid #edb03f; */
   /* color: var(--accent, var(--ash)); */
-  color: #7e8bb8;
+  color: #4f608b;
   /* color: #edb03f; */
   border-radius: 100px;
   padding: 0.15rem 0.8rem 0.2rem;
-  font-size: 0.65rem;
-  font-weight: 200;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .project-title,
@@ -215,7 +215,8 @@ main {
 
 .project-name a {
   /* color: #ffffff; */
-  color: #93ae7d;
+  color: #526b48;
+  font-weight: 600;
   /* font-weight: 300; */
   padding-right: 0.25rem;
   text-decoration: none;
@@ -235,7 +236,7 @@ main {
 
 .project-year {
   /* color: #7e8bb8; */
-  color: #93ae7d;
+  color: #526b48;
 }
 
 @media (max-width: 700px) {
