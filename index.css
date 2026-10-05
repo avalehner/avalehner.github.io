@@ -23,7 +23,7 @@
 body {
   /* background-image: radial-gradient(#5c2962 0%, #2b1630 95%, #19121f 100%); */
   /* background: #381b46;  */
-  background: #fff9f4;
+  background: #fffbf7;
   /* radial-gradient(ellipse 1200px 1200px at 9% 140%, rgba(194, 102, 93, 0.20), transparent 60%),
     radial-gradient(ellipse 700px 700px at 95% 4%, rgba(132, 100, 160, 0.4), transparent 60%),
     radial-gradient(ellipse 1200px 1200px at 91% 100%, rgb(116, 51, 100, 0.4), transparent 60%), */
@@ -194,7 +194,7 @@ main {
 
 .project-card:hover,
 .project-card:focus-within {
-  background-color: #f7ece2;
+  background-color: #fcf3ea;
   box-shadow: inset 3px 0 #526b48;
 }
 
