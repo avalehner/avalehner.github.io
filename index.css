@@ -333,8 +333,8 @@ main {
 }
 
 .project-name a {
-  /* color: #ffffff; */
   color: #526b48;
+  font-size: 1.15rem;
   font-weight: 600;
   /* font-weight: 300; */
   padding-right: 0.25rem;
@@ -346,9 +346,10 @@ main {
 }
 
 .project-year {
-  color: #4f608b;
-  font-size: 0.85rem;
-  font-weight: 400;
+  color: #526b4875;
+  font-weight: 600;
+  font-size: 1.15rem;
+  font-style: italic;
 }
 
 .project-description {
