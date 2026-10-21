@@ -59,7 +59,7 @@ main {
   background: rgba(246, 237, 227, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 2rem;
 }
 
 /* nav */
@@ -199,12 +199,18 @@ main {
   display: inline-block;
   color: rgb(32, 17, 5, 0.8);
   text-decoration: none;
-  transition: color 150ms ease;
   font-size: 0.8rem;
   border: 1px solid rgb(136, 159, 204, 0.4);
   background-color: #e2e8ff95;
   border-radius: 20px;
   padding: 0.3rem 0.8rem 0.3rem;
+}
+.links a:hover {
+  /* color: #c4e3ac; */
+  /* color: #526b48; */
+  color: rgb(32, 17, 5, 0.8);
+  transition: 150ms ease;
+  background-color: #c5cff795;
 }
 
 /* projects */
@@ -299,7 +305,7 @@ main {
 .project-tags {
   display: flex;
   gap: 0.6rem;
-  margin: 1.2rem 0 0 1.25rem;
+  margin: 1.2rem 0 0 0;
 }
 
 .tag {
