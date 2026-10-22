@@ -7,8 +7,10 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(ellipse at center, #fff8e5 0%, #cebcc5 100%);
+  -moz-osx-font-smoothing: graysc ale;
+  background: radial-gradient(ellipse at center, #fff8e5 0%, #b095a2 100%);
+
+  /* cebcc5 100% */
 }
 
 body {
@@ -41,7 +43,7 @@ main {
   border: 1px solid rgb(194, 84, 0, 0.2); */
   background: rgba(246, 237, 227, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 1rem 2rem 2rem;
 }
 
@@ -63,7 +65,7 @@ main {
   border: 1px solid rgb(151, 180, 142, 0.45);
   background-color: #ebffe480;
   border-radius: 20px;
-  padding: 0 1rem;s
+  padding: 0 1rem;
 }
 
 .nav-bar li {
@@ -189,13 +191,13 @@ main {
   gap: 1.2rem;
 }
 
-.featured-projects-label::before,
+/* .featured-projects-label::before,
 .featured-projects-label::after {
   content: "~";
   flex: none;
   height: auto;
   background: none;
-}
+} */
 
 .project-name,
 .project-description,
@@ -221,8 +223,9 @@ main {
 
 .project-card:hover,
 .project-card:focus-within {
-  background-color: #ffe8d480;
-  border: 0.5px solid rgb(237, 148, 148, 0.3);
+  /* background-color: #fddabc85; */
+  background-color: #ffe8d495;
+  border: 0.5px solid rgb(237, 148, 148, 0.8);
   border-radius: 12px;
   box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.1);
 }
@@ -295,26 +298,15 @@ main {
 }
 
 .tag {
-  /* border: 1px solid var(--accent, var(--ash)); */
-  /* border: 0.75px solid #4f608b; */
-  /* background-color: #bed8b550; */
-  background-color: #c8b5d735;
-  /* border: 0.5px solid #edb03f; */
-  /* color: var(--accent, var(--ash)); */
-  /* color: #4f608b; */
+  /* background-color: #c8b5d750; */
+  background-color: #acc8a240;
+  /* background-color: #d2cb9955; */
   color: #20110590;
-  /* color: #edb03f; */
   border-radius: 5px;
   padding: 0.15rem 0.4rem 0.15rem 0.4rem;
   font-size: 0.9rem;
   font-weight: 500;
   padding-inline: 0.65rem;
-}
-
-.featured-projects-label {
-  gap: 0.75rem;
-  font-size: clamp(1.1rem, 5vw, 1.4rem);
-  white-space: nowrap;
 }
 
 .project-name a,
@@ -326,6 +318,10 @@ main {
 /* media queries */
 
 @media (max-width: 700px) {
+  :root {
+    background: radial-gradient(ellipse at center, #fff8e5 0%, #cebcc5 100%);
+  }
+
   body {
     padding: 0 1.25rem;
   }
