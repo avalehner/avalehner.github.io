@@ -147,6 +147,11 @@ main {
   border-radius: 10px;
 }
 
+.intro-copy h2 {
+  font-size: 1.4rem;
+  color: #607858;
+}
+
 /* jump to links */
 
 .links {
