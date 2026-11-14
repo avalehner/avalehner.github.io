@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- look more into meta tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ava Lehner</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <ul class="nav-bar">
+          <li><a href="../index.html" id="index" class="title">HOME</a></li>
+          <!-- <li><a href="#">PROJECTS</a></li> -->
+          <!-- <li><a href="#">ART</a></li> -->
+          <li><a href="https://github.com/avalehner">GITHUB</a></li>
+          <li>
+            <a
+              href="https://docs.google.com/document/d/1QAUSfk50UfCYSU64OCLgKrfPRR1XNviK10tTzb62LKw/edit?usp=sharing"
+              >RESUME</a
+            >
+          </li>
+          <li><a href="mailto:avalehner@gmail.com">EMAIL</a></li>
+          <!-- <li><a href="#">ABOUT</a></li> -->
+        </ul>
+      </nav>
+      <div class="main-container">
+        <h1 class="name">~ TAROLYTICS ~</h1>
+        <div class="project-links">
+          <ul class="links">
+            <li>
+              <a href="https://tarolytics.app">URL</a>
+            </li>
+            <li>
+              <a href="https://github.com/avalehner/tarolytics">GITHUB REPO</a>
+            </li>
+          </ul>
+        </div>
+        <div class="intro-copy">
+          <p>
+            As someone who pulls tarot cards as a daily ritual, I wanted to
+            build a tool to help track tarot readings and provide card by card
+            analytics. Tarolytics allows users to input and save readings from
+            the physical world, as well as generate new readings in the app.
+            Each reading a user inputs is saved to a PostgreSQL database where
+            it can be queried for analytics information: how often a specific
+            card is being pulled, its reversal rate, does it commonly appear
+            with any other cards, what notes has the user previously saved with
+            this card.
+          </p>
+          <p>
+            Tarolytics also generates a display page for each reading where the
+            user can pull clarifier cards (cards to clarify the original meaning
+            of the reading) and queries an LLM for a reading analysis based on
+            the reading topic and notes the user input.
+          </p>
+          <img
+            src="../images/tarolytics_example_reading.png"
+            alt="example of tarot reading"
+            width="600px"
+          />
+          <p>
+            Tarolytics also generates a display page for each reading where the
+            user can pull clarifier cards (cards to clarify the original meaning
+            of the reading) and queries an LLM for a reading analysis based on
+            the reading topic and notes the user input Tarolytics also provides
+            the user with their astrological chart information and uses this to
+            generate informed personalized insights on the users tarot readings.
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- what is this?? v -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

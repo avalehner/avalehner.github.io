@@ -130,7 +130,7 @@ main {
   color: #201105;
 }
 
-.home-intro .intro-copy p {
+.intro-copy p {
   border-left: 0;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -138,8 +138,13 @@ main {
   padding-left: 0;
 }
 
-.home-intro .intro-copy p + p {
+.intro-copy p + p {
   margin-top: 1rem;
+}
+
+.intro-copy img {
+  margin: 1rem 0;
+  border-radius: 10px;
 }
 
 /* jump to links */
@@ -315,6 +320,13 @@ main {
   overflow-wrap: anywhere;
 }
 
+/* project pages */
+
+.project-links {
+  display: flex;
+  margin-top: 1rem;
+}
+
 /* media queries */
 
 @media (max-width: 700px) {
@@ -360,15 +372,15 @@ main {
     padding: 1rem 0.35rem 0.5rem; /* was 0.75rem */
   }
 
-  .links {
+  /* .links {
     /* display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: center;
     justify-items: center;
     width: 60%;
     gap: 0.75rem;
-    overflow: visible; */
-  }
+    overflow: visible; 
+  } */
 
   .links a {
     display: block;
